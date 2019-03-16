@@ -1,6 +1,10 @@
 import ControllerCd from './controller/ControllerCd.js';
+import ControllerModal from './controller/ControllerModal.js';
 
 
-ControllerCd.index();
+ControllerCd.changeBackground();
+ControllerCd.loadAllCds();
+ControllerModal.openModal();
+
 ;
 

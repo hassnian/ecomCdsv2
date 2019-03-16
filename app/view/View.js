@@ -1,18 +1,28 @@
-import viewCd from './viewCd.js'
+import cdTemplate from './cdTemplate.js'
+import ModalTemplate from './ModalTemplate.js'
+
 class View{
-    constructor(){
+    constructor(element){
+        this.type=element;
         // this.cdList=document.querySelector('.cd-list');
     }
-    create(element){
-        if(element.type=="cd"){
-         let cdTemplate=viewCd(element);
-         console.log(cdTemplate);
-         return cdTemplate;
+
+
+    fillTemplateOf(element,type){
+        if(type=="cd"){
+         let cdTemplateWithCd=cdTemplate(element);
+         this.html= cdTemplateWithCd;
+        }
+        else if (type=="modal"){
+         let ModalTemplateWithCd=ModalTemplate(element);
+         this.html= ModalTemplateWithCd;
         }
     }
-    showElement(template) {
+
+
+    showElement(template , target) {
     const div = document.createElement('div');
-    const tbody = document.querySelector('.cd-list');
+    const tbody = document.querySelector(target);
     div.innerHTML = template;
     tbody.appendChild(div);
 }

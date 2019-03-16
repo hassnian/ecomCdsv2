@@ -11,14 +11,7 @@ const modalX = document.querySelector('.modal-x');
 
 
 //change background
-document.addEventListener("mouseover",(e)=>{
-    if(e.target.classList.contains('cd-text')){
-           const fondo=document.querySelector('.fondo');
-           fondo.style.backgroundImage=e.target.parentElement.style.backgroundImage;
 
-        
-    }
-})
 
 
 
@@ -237,15 +230,7 @@ class UI {
                 div.classList.add('modal-g');
 
 
-                div.innerHTML = `<div class="modal-c">
-                <span class="modal-x">X</span>
-                <img src="${e.url}" alt="" class="modal-i">
-                <h2 class="modal-t">${e.name}</h2>
-                <h3 class="">by ${e.artist}</h3>
-                <p class="modal-d">${e.desc}</p>
-                <span>Price:${e.price}</span>
-                <a href="#" class="btn btn-outline-primary modal-btn">Add to cart</a>
-            </div>`;
+                div.innerHTML = ``;
                 body.appendChild(div);
 
 

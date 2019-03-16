@@ -49,7 +49,9 @@ nav {
   background-size: 100%;
   background-position: center;
   transition: filter 0.3s ease-out;
-  transition: background-size 0.3s ease-out; }
+  transition: background-size 0.3s ease-out; 
+  animation: animacionModal 0.5s ease-out forwards;
+}
 
 .caratula-img:hover {
   filter: grayscale(100%);

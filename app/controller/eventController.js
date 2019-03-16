@@ -1,0 +1,3 @@
+class eventController{
+    static clickOn
+}
