@@ -1,13 +1,12 @@
- import viewCd from '../view/viewCd.js'
  import Model from './Model.js'
 
  class Cd extends Model{
-    constructor(name,artist,description,url,price,id){
+    constructor(name,artist,desc,url,price,id){
         super();
         this.type="cd";
         this.name = name;
         this.artist = artist;
-        this.desc = description;
+        this.desc = desc;
         this.url = url;
         this.price = price;
         this.id = id;
@@ -18,17 +17,19 @@
     inCart(value){
         this.inCart=value;
     }
-
+    populateCd(cd){
+        this.name = cd.name;
+        this.artist = cd.artist;
+        this.desc = cd.desc;
+        this.url = cd.url;
+        this.price = cd.price;
+        this.id = cd.id;        
+    }
     
     static saveCd(){
-
+        
     }
 
-    static loadCds(cd) {
-
-     
-
-    }
-
+   
 }
 export default Cd
