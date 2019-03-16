@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Ecommerce Cds</title>
+</head>
+
+<body >
+   <!--
+
+    onload="UI.loadCds(cds), UI.updateCart() ,UI.updatePrice()"
+   -->
+    
+    <header>
+        <nav class="container">
+            <h1 class="logo">ecommerce<span class="text-danger">CDs</span></h1>
+            <div class="carrito" onclick="UI.showCartBar()">
+                <i class="fas fa-shopping-cart cart-c carrito-icon"></i>
+                <span class="carrito-numb"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container dp  cd-list">
+            
+            <!-- <div class="cd">
+                <div class="caratula-img">
+                    <span class="cd-text">SHOW MORE</span>
+                </div>
+
+            </div> -->
+
+
+
+            <!-- <div class="modal-g">
+
+                <div class="modal-c">
+                    <span class="modal-x">X</span>
+                    <img src="https://www.billboard.com/files/styles/review_main_image/public/media/fx_4Walls_Album_410.png" alt="" class="modal-i">
+                    <h2 class="modal-t">Lorem ipsum dolor, </h2>
+                    <p class="modal-d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti molestias reiciendis eaque quis expedita? Eius est architecto in a perferendis vero ratione fugit dolore laborum, illum earum! Architecto, laudantium vel!</p>
+                    <span>Price:39.99S</span>
+
+                    <a href="#" class="btn btn-outline-primary  modal-btn">Add to cart</a>
+                </div>
+            </div> -->
+
+
+
+
+
+            <!-- <div class="cart-bar-g">
+                <div class="cart-bar-c">
+                    <span class="modal-x">X</span>
+                    <h1>Your cart</h1>
+                    <div class="cart-bar-body">
+                        <div class="cart-bar-item">
+                            <img src="https://www.billboard.com/files/styles/review_main_image/public/media/fx_4Walls_Album_410.png" alt="" class="cart-bar-img">
+                            <h2 class="cart-bar-title">JoyTime</h2>
+                            <span class="cart-bar-artist"> by lorem lorem</span>
+                            <span class="cart-bar-price">39.99$</span>
+                           <a href="#" class="cart-bar-remove btn btn-outline-danger btn-sm">Remove</a>
+
+                        </div>
+                        <div class="cart-bar-empty">
+                           
+                            <h2>The cart is empty!</h2>
+                        </div>
+
+                    </div>
+                    <p class="font-weight-bold cart-bar-subtotal">Subtotal<span
+                         class="cart-bar-subtotal-price" ></span></p>
+                    <a href="#" class="btn btn-danger btn-lg  cart-bar-btn">Checkout</a>
+                </div>
+            </div> -->
+
+            
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <div class="fondo">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="main.js" type="module"></script>
+    <script src="./model/Cd.js" type="module" ></script>
+    <script src="./controller/ControllerCd.js" type="module"></script>
+
+
+    <!-- -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

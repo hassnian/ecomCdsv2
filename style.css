@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.fondo {
+  transition: 0.3s ease-out;
+  background-position: center;
+  filter: blur(5px);
+  opacity: 0.8;
+  background-position-y: 40%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2; }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.logo {
+  float: left; }
+
+.carrito {
+  position: absolute;
+  right: 15vw;
+  top: 0;
+  padding: 10px;
+  background-color: black;
+  color: white; }
+
+.carrito:hover,
+.carrito:focus {
+  cursor: pointer; }
+
+.dp {
+  display: flex;
+  flex-wrap: wrap; }
+
+.caratula-img {
+  width: 200px;
+  height: 200px;
+  filter: grayscale(0%);
+  background-image: url("https://i.pinimg.com/originals/44/26/be/4426bedbd11289425446188827e96022.jpg");
+  background-size: cover;
+  background-size: 100%;
+  background-position: center;
+  transition: filter 0.3s ease-out;
+  transition: background-size 0.3s ease-out; }
+
+.caratula-img:hover {
+  filter: grayscale(100%);
+  background-position: center;
+  background-size: 110%;
+  cursor: pointer; }
+
+.cd-text {
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; }
+
+.cd-text:hover {
+  opacity: 1; }
+
+.modal-g {
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.modal-i {
+  width: 400px;
+  float: left;
+  margin-right: 10px; }
+
+.modal-c {
+  margin: 8% auto;
+  height: 440px;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 2px 2px 20px black, -2px -2px 20px black;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  animation: animacionModal 0.5s ease-out forwards;
+  width: 70%;
+  border-radius: 5px; }
+
+@keyframes animacionModal {
+  from {
+    opacity: 0;
+    top: 20px; }
+  to {
+    top: 0px;
+    opacity: 1; } }
+.modal-x {
+  float: right;
+  color: gray;
+  font-size: 30px; }
+
+.modal-x:hover,
+.modal-x:focus {
+  cursor: pointer;
+  color: black; }
+
+.modal-t {
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 100px; }
+
+.modal-btn {
+  right: 0;
+  position: relative; }
+
+.cart-bar-g {
+  display: block;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.cart-bar-c {
+  position: absolute;
+  right: -10vw;
+  bottom: 0;
+  opacity: 0;
+  height: 100%;
+  width: 25%;
+  background-color: white;
+  padding: 20px;
+  animation: animacion 0.5s ease-out forwards; }
+
+@keyframes animacion {
+  from {
+    right: -10vw;
+    opacity: 0; }
+  to {
+    opacity: 1;
+    right: 0vw; } }
+.cart-bar-body {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 73%; }
+  .cart-bar-body .cart-bar-empty {
+    background-image: url("https://i.gifer.com/GKoy.gif");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative; }
+    .cart-bar-body .cart-bar-empty h2 {
+      font-weight: 600;
+      color: white;
+      position: absolute; }
+
+.cart-bar-item {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px; }
+  .cart-bar-item .cart-bar-img {
+    margin-right: 10px;
+    width: 100px;
+    float: left; }
+  .cart-bar-item h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 0; }
+  .cart-bar-item .cart-bar-artist {
+    display: block;
+    color: gray;
+    margin-bottom: 6px; }
+  .cart-bar-item .cart-bar-price {
+    display: inline;
+    left: 0;
+    font-size: 20px; }
+  .cart-bar-item .cart-bar-remove {
+    float: right;
+    margin-right: 10px;
+    padding-top: 5px; }
+
+.cart-bar-btn {
+  position: absolute;
+  width: 89%;
+  bottom: 20px;
+  right: 20px; }
+
+.cart-bar-subtotal {
+  font-size: 30px; }
+
+.cart-bar-subtotal-price {
+  display: block;
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */

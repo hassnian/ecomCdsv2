@@ -1,0 +1,5 @@
+class viewCd{
+constructor(model){
+
+}
+}
