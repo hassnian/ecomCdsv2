@@ -1,10 +1,16 @@
 import ControllerCd from './controller/ControllerCd.js';
 import ControllerModal from './controller/ControllerModal.js';
+import eventController from './controller/eventController.js';
 
 
-ControllerCd.changeBackground();
+eventController.changeBackground();
 ControllerCd.loadAllCds();
-ControllerModal.openModal();
+//ControllerModal.openModal(5);
+eventController.clickOn();
+function hola(){
+    console.log("hola")
+
+}
 
 ;
 

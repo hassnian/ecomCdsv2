@@ -1,6 +1,6 @@
 const cdTemplate = (cd) => `
-<div style='background-image:url("${cd.url}")' class='caratula-img mb-2 ml-2 cd' id='${cd.id}'>
-    <span class="cd-text">MORE INFO</span>
+<div style='background-image:url("${cd.url}")' class='caratula-img mb-2 ml-2 cd' >
+    <span class="cd-text" id='${cd.id}' >MORE INFO</span>
 </div>
     `;
 

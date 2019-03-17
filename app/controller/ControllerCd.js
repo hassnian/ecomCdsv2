@@ -8,17 +8,7 @@ class ControllerCd {
        
 
     }
-    static changeBackground(){
-        document.addEventListener("mouseover",(e)=>{
-            if(e.target.classList.contains('cd-text')){
-                   const fondo=document.querySelector('.fondo');
-                   fondo.style.backgroundImage=e.target.parentElement.style.backgroundImage;
-        
-                
-            }
-        }) 
-        
-    }
+   
     static loadAllCds() {
         const data=Model.getData();
         data.forEach(cdInArray=>{
@@ -26,7 +16,7 @@ class ControllerCd {
             cd.populateCd(cdInArray)
             console.log(cdInArray);
             const view = new View(cd);
-            view.fillTemplateOf(cd,"cd");
+            view.fillTemplateOf(cd);
             view.showElement(view.html,'.cd-list');
         })
      

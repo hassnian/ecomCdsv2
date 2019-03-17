@@ -11,7 +11,6 @@
         this.price = price;
         this.id = id;
         this.inCart=false;
-        
 
     }
     inCart(value){

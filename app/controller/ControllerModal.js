@@ -5,17 +5,25 @@ import Model from '../model/Model.js'
 import Modal from '../model/Modal.js'
 
 class ControllerModal{
-    static openModal(){
-        const data=Modal.getData()[2];
+    static openModal(id){
+        
+        const data=Modal.getData()[id-1];
         
         const cd = new Cd();
         cd.populateCd(data);
         const modal = new Modal(cd);
         const view = new View(modal);
         
-        view.fillTemplateOf(modal,"modal");
+        view.fillTemplateOf(modal);
         view.showElement(view.html,'.cd-list');
-        console.log(view );
+        
+    }
+
+    static closeModal(e){
+        if (e.target.classList.contains('modal-x')) {
+            e.target.parentElement.parentElement.remove();
+        }
+
     }
 }
 

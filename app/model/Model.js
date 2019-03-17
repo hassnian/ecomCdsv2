@@ -10,6 +10,7 @@ class Model{
      closeModal(){
         
     }
+    static findById
 }
 
 export default Model
