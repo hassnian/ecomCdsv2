@@ -1,4 +1,6 @@
 import ControllerModal from './ControllerModal.js'
+import ControllerCartBar from './ControllerCartBar.js'
+
 class eventController{
     static clickOn(){
         document.addEventListener('click', (e) => {
@@ -8,6 +10,7 @@ class eventController{
           
             // // UI.showCartBar(e);
             // UI.updateCart(e);
+
             // Store.removeCdBar(e);
             // Store.addToCart(e);
         
@@ -18,18 +21,25 @@ class eventController{
     static whatImClickingOn(e){
         const {classList,id}=e.target;
         if(classList.contains("cd-text")){
-            console.log("you clicked in a cd")
             ControllerModal.openModal(id);
+            console.log("you clicked in a cd")
             return "cd";
         }
         else if (classList.contains("modal-x")){
-            console.log("you clicked in a modal x ")
             ControllerModal.closeModal(e);
+            console.log("you clicked in a modal x ")
             return "modal-x-cd";
         }
         else if (classList.contains("carrito")||classList.contains("carrito-icon")){
+            ControllerCartBar.createCartBar();
             console.log("click en carrito");
+        }else if ( classList.contains('modal-btn')){
+            ControllerModal.addToCart(e);
+            // getLocalStorage
+            //
+            console.log("añadir al carrito bro");
         }
+       
        
         
     }

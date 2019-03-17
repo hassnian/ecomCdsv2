@@ -7,8 +7,9 @@ class Model{
         return cds
     }
 
-     closeModal(){
-        
+    static getLocalStorage(){
+        const cartArr = JSON.parse(window.localStorage.getItem('cartArr'));
+        return cartArr;
     }
     static findById
 }

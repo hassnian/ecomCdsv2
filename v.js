@@ -20,7 +20,7 @@ document.addEventListener('click', (e) => {
     // console.log(e.target);
 
     UI.showModal(e);
-    // UI.showCartBar(e);
+    UI.showCartBar(e);
     UI.closeModal(e);
     UI.updateCart(e);
     Store.removeCdBar(e);

@@ -1,5 +1,7 @@
 import cdTemplate from './cdTemplate.js'
 import ModalTemplate from './ModalTemplate.js'
+import cartBarTemplate from './cartBarTemplate.js'
+import cartBarItemTemplate from './cartBarItemTemplate.js'
 
 class View {
     constructor(element) {
@@ -13,6 +15,7 @@ class View {
 
 
     fillTemplateOf(element) {
+        
         if (element.type == "cd") {
             //let cdTemplateWithCd = cdTemplate(element);
             this.html = cdTemplate(element);           
@@ -20,6 +23,14 @@ class View {
             //let ModalTemplateWithCd = ModalTemplate(element);
             this.html = ModalTemplate(element);
         }
+        else if(element.type == "cartbar"){
+            this.html = cartBarTemplate(element);
+        }
+        else if(element.type == "cartbaritem"){
+            this.html = cartBarItemTemplate(element);
+        }
+
+        
     }
 
 
