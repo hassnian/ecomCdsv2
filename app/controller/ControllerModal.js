@@ -28,10 +28,10 @@ class ControllerModal {
 
     }
     static addToCart(e) {
-        this.toastNotification('del');
+        this.toastNotification('add');
         this.storeInLocal(e);
         this.deleteModal(e);
-
+        this.clearToast();
     }
     
     static toastNotification(type){
@@ -51,7 +51,8 @@ class ControllerModal {
         
     }
     static clearToast(){
-        const toastContainer=document.querySelector()
+        const toastContainer=document.querySelector('.tost-container');
+        setTimeout(function(){ toastContainer.removeChild(toastContainer.firstChild) }, 2000);
     }
 
     static storeInLocal(e){

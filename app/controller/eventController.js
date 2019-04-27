@@ -6,18 +6,13 @@ class eventController{
         document.addEventListener('click', (e) => {
             
             this.whatImClickingOn(e);
-            // ControllerModal.showModal(e);
-          
-            // // UI.showCartBar(e);
-            // UI.updateCart(e);
-
-            // Store.removeCdBar(e);
-            // Store.addToCart(e);
-        
-            //add btn !!
+         
         });
         
     }
+    //TODO:this function is doing more than one thing
+    //i have to change this  bcz is triggered every time when i click 
+    //i could bind a function to each component or in the  object
     static whatImClickingOn(e){
         const {classList,id}=e.target;
         if(classList.contains("cd-text")){
@@ -35,9 +30,7 @@ class eventController{
             console.log("click en carrito");
         }else if ( classList.contains('modal-btn')){
             ControllerModal.addToCart(e);
-            // getLocalStorage
-            //
-            console.log("añadir al carrito bro");
+            console.log("added to cart");
         }
        
        

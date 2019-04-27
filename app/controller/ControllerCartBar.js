@@ -14,9 +14,9 @@ class ControllerCartBar {
         const view = new View(cartBar);
         
         view.fillTemplateOf(cartbar);
-        console.log(cartbar);
-        //view.showElement(view.html,'.cd-list');
-        //this.createCartBarItems();
+  
+        view.showElement(view.html,'.cd-list');
+        this.createCartBarItems();
     }
     static createCartBarItems(){
         const data=Modal.getLocalStorage();
