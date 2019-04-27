@@ -2,6 +2,7 @@ import cdTemplate from './cdTemplate.js'
 import ModalTemplate from './ModalTemplate.js'
 import cartBarTemplate from './cartBarTemplate.js'
 import cartBarItemTemplate from './cartBarItemTemplate.js'
+import ToastTemplate from './toastNotificarion.js'
 
 class View {
     constructor(element) {
@@ -28,6 +29,8 @@ class View {
         }
         else if(element.type == "cartbaritem"){
             this.html = cartBarItemTemplate(element);
+        }else if(element.type == "toast"){
+            this.html = ToastTemplate(element);
         }
 
         

@@ -1,6 +1,6 @@
-const ToastNotification = (cd) =>`
+const ToastNotification = (toast) =>`
 <div class="toast-notification">
-    <span class="toast-content"> Item added to the cart</span>
+    <span class="toast-content">${toast.content}</span>
 </div>`
 
 

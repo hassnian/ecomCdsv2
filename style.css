@@ -37,35 +37,50 @@ nav {
   cursor: pointer; }
 
 
-
+.tost-container{
+      background-color: red;
+      width: 200px;
+      
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+    } 
 .toast-notification{
   background-color: #323232;
+  position: relative;
   width: 200px;
   height: 60px;
   z-index: 22;
   opacity: 0;
-  position: absolute;
-  bottom: 0px;
-  left: 20px;
-  animation: animationToast 0.5s ease-out forwards;
+  animation: animationToast 2s ease-out forwards;
+  margin: 5px 0;
 
-}  
+} 
+
 .toast-content{
   color: white;
   display:block;
-  margin-top: 18px;
+  padding-top: 18px;
   text-align: center;
 }
 
 
 @keyframes animationToast{
-  from{
+  0%{
     bottom: 0;
     opacity: 0;
   }
-  to{
+  15%{
     bottom: 40px;
     opacity: 1;
+  }
+  80%{
+    bottom: 40px;
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    bottom: 60px;
   }
 }
 

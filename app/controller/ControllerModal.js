@@ -3,6 +3,8 @@ import Cd from '../model/Cd.js';
 import View from '../view/View.js'
 import Model from '../model/Model.js'
 import Modal from '../model/Modal.js'
+import Toast from '../model/Toast.js'
+
 
 class ControllerModal {
     static openModal(id) {
@@ -26,21 +28,37 @@ class ControllerModal {
 
     }
     static addToCart(e) {
-        this.toastNotification('add');
+        this.toastNotification('del');
         this.storeInLocal(e);
         this.deleteModal(e);
 
     }
     
     static toastNotification(type){
+        let text;
+        if(type=="add"){
+            text="Item added to the cart"
+        }
+        else if(type=="del"){
+            text="Item removed"
+        }
+
+        const toast=new Toast(text);
+        const view =new View(toast);
+        view.fillTemplateOf(toast);
+        view.showElement(view.html,'.tost-container')
+        
         
     }
-
+    static clearToast(){
+        const toastContainer=document.querySelector()
+    }
 
     static storeInLocal(e){
         const id=e.target.dataset.id;
         const cds=Model.getData();
         let cartArr=JSON.parse(window.localStorage.getItem('cartArr'));
+        
             cds.forEach((e, index) => {
                 if (e.id == id) {
                     let currentCd = cds[index];
