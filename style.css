@@ -36,10 +36,45 @@ nav {
 .carrito:focus {
   cursor: pointer; }
 
+
+
+.toast-notification{
+  background-color: #323232;
+  width: 200px;
+  height: 60px;
+  z-index: 22;
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  animation: animationToast 0.5s ease-out forwards;
+
+}  
+.toast-content{
+  color: white;
+  display:block;
+  margin-top: 18px;
+  text-align: center;
+}
+
+
+@keyframes animationToast{
+  from{
+    bottom: 0;
+    opacity: 0;
+  }
+  to{
+    bottom: 40px;
+    opacity: 1;
+  }
+}
+
 .dp {
   display: flex;
   flex-wrap: wrap; }
 
+
+  
 .caratula-img {
   width: 200px;
   height: 200px;

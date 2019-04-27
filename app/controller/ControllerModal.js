@@ -26,10 +26,17 @@ class ControllerModal {
 
     }
     static addToCart(e) {
+        this.toastNotification('add');
         this.storeInLocal(e);
         this.deleteModal(e);
 
     }
+    
+    static toastNotification(type){
+        
+    }
+
+
     static storeInLocal(e){
         const id=e.target.dataset.id;
         const cds=Model.getData();
