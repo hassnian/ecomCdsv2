@@ -6,12 +6,13 @@ class Model{
         const cds = data;
         return cds
     }
-
+    
     static getLocalStorage(){
+        console.log("asd");
         const cartArr = JSON.parse(window.localStorage.getItem('cartArr'));
         return cartArr;
     }
-    static findById
+    //static findById
 }
 
 export default Model

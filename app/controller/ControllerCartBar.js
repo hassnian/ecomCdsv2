@@ -14,20 +14,21 @@ class ControllerCartBar {
         const view = new View(cartBar);
         
         view.fillTemplateOf(cartbar);
-        view.showElement(view.html,'.cd-list');
-        this.createCartBarItems();
+        console.log(cartbar);
+        //view.showElement(view.html,'.cd-list');
+        //this.createCartBarItems();
     }
     static createCartBarItems(){
-        const data=Modal.getData()[1];
-        
-        const cd = new Cd();
-        cd.populateCd(data);
-        const cartbaritem = new cartBarItem(cd);
-        console.log(cartbaritem);
-        const view = new View(cartbaritem);
-        
-        view.fillTemplateOf(cartbaritem);
-        view.showElement(view.html,'.cart-bar-body');
+        const data=Modal.getLocalStorage();
+        data.forEach((currenCd,index) => {
+            console.log(currenCd);
+            const cd = new Cd();
+            cd.populateCd(currenCd);
+            const cartbaritem = new cartBarItem(cd);
+            const view = new View(cartbaritem);
+            view.fillTemplateOf(cartbaritem);
+            view.showElement(view.html,'.cart-bar-body');
+        });
        
     }
 }

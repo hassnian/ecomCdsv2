@@ -38,6 +38,7 @@ class View {
         const div = document.createElement('div');
         const tbody = document.querySelector(target);
         div.innerHTML = template;
+        console.log(div);
         tbody.appendChild(div);
     }
 }

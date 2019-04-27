@@ -49,8 +49,6 @@ class eventController{
             if(e.target.classList.contains('cd-text')){
                    const fondo=document.querySelector('.fondo');
                    fondo.style.backgroundImage=e.target.parentElement.style.backgroundImage;
-        
-                
             }
         }) 
         

@@ -9,10 +9,7 @@ ControllerCd.loadAllCds();
 //ControllerModal.openModal(5);
 eventController.clickOn();
 
-function hola(){
-    console.log("hola")
 
-}
 
 ;
 
