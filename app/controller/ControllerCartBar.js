@@ -4,7 +4,9 @@ import View from '../view/View.js'
 import Model from '../model/Model.js'
 import Modal from '../model/Modal.js'
 import cartBar from '../model/cartBar.js'
-import cartBarItem from "../model/cartBarItem.js";
+import cartBarItem from "../model/cartBarItem.js"
+import LocalStorage from './LocalStorage.js'
+import ControllerModal from './ControllerModal.js';
 
 class ControllerCartBar {
 
@@ -30,6 +32,14 @@ class ControllerCartBar {
             view.showElement(view.html,'.cart-bar-body');
         });
        
+    }
+
+    static removeCartBarItem(e){
+        LocalStorage.deleteFromLocalStorage(e);
+        ControllerModal.toastNotification('del');
+        e.target.parentElement.remove();
+        console.log(e.target.dataset.cartid);
+
     }
 }
 export default ControllerCartBar

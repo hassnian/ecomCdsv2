@@ -7,7 +7,7 @@ const ModalTemplate = (cd) =>`
             <h3 class="">by ${cd.artist}</h3>
             <p class="modal-d">${cd.desc}</p>
         <span>Price:${cd.price}</span>
-        <button href="#"  class="btn btn-outline-primary modal-btn" data-id="${cd.id}"\>Add to cart</button>
+        <button class="btn btn-outline-primary modal-btn" data-id="${cd.id}"\>Add to cart</button>
     </div>
 </div>`
 

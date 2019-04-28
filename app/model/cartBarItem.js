@@ -11,8 +11,7 @@ class cartBarItem extends Model {
         this.id = element.id;
         this.inCart=true;
         this.type = "cartbaritem";
-        
-
+ 
     }
     
 

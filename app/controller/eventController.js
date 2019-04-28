@@ -10,9 +10,12 @@ class eventController{
         });
         
     }
+
+    
     //TODO:this function is doing more than one thing
     //i have to change this  bcz is triggered every time when i click 
     //i could bind a function to each component or in the  object
+
     static whatImClickingOn(e){
         const {classList,id}=e.target;
         if(classList.contains("cd-text")){
@@ -31,10 +34,11 @@ class eventController{
         }else if ( classList.contains('modal-btn')){
             ControllerModal.addToCart(e);
             console.log("added to cart");
+        }else if (classList.contains('remove')){
+            ControllerCartBar.removeCartBarItem(e);
+            console.log("btn remove clicked");
         }
-       
-       
-        
+
     }
 
     static changeBackground(){

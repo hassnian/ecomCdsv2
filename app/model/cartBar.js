@@ -6,13 +6,7 @@ class cartBar extends Model {
         this.items = [];
         this.total = 0
     }
-    updateTotal(){
-        
-    }
-    addToCart(){
-
-    }
-    
+ 
 
 }
 

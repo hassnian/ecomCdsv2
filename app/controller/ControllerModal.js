@@ -4,7 +4,7 @@ import View from '../view/View.js'
 import Model from '../model/Model.js'
 import Modal from '../model/Modal.js'
 import Toast from '../model/Toast.js'
-
+import LocalStorage from './LocalStorage.js'
 
 class ControllerModal {
     static openModal(id) {
@@ -27,50 +27,42 @@ class ControllerModal {
         }
 
     }
+    
     static addToCart(e) {
+        if (LocalStorage.checkIfItsAlreadyStored(e)) {
+            this.toastNotification('already');
+            return
+        }
         this.toastNotification('add');
-        this.storeInLocal(e);
+        LocalStorage.storeInLocal(e);
         this.deleteModal(e);
         this.clearToast();
     }
-    
     static toastNotification(type){
         let text;
+
+        //TODO: i have refactor this 
         if(type=="add"){
             text="Item added to the cart"
         }
         else if(type=="del"){
             text="Item removed"
-        }
+        }else if(type=="already"){
+            text="Already in cart!"
 
+        }
         const toast=new Toast(text);
         const view =new View(toast);
         view.fillTemplateOf(toast);
         view.showElement(view.html,'.tost-container')
-        
-        
+
     }
     static clearToast(){
         const toastContainer=document.querySelector('.tost-container');
         setTimeout(function(){ toastContainer.removeChild(toastContainer.firstChild) }, 2000);
     }
 
-    static storeInLocal(e){
-        const id=e.target.dataset.id;
-        const cds=Model.getData();
-        let cartArr=JSON.parse(window.localStorage.getItem('cartArr'));
-        
-            cds.forEach((e, index) => {
-                if (e.id == id) {
-                    let currentCd = cds[index];
-                    if(cartArr==null){
-                        cartArr=[];
-                    }
-                    cartArr.push(currentCd);
-                    window.localStorage.setItem('cartArr', JSON.stringify(cartArr));
-                }
-            })
-    }
+   
 }
 
 export default ControllerModal

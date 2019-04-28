@@ -7,10 +7,7 @@ import ToastTemplate from './toastNotificarion.js'
 class View {
     constructor(element) {
         this.type = element.type;
-        //this.target=
-           
-        
-        
+
         // this.cdList=document.querySelector('.cd-list');
     }
 
