@@ -40,12 +40,14 @@ class LocalStorage {
     static checkIfItsAlreadyStored(e) {
         const CdId = e.target.dataset.id;
         const locStorCdArr = JSON.parse(window.localStorage.getItem('cartArr'));
-        for (let i = 0; i < locStorCdArr.length; i++) {
-            if (CdId == locStorCdArr[i].id) {
-                return true
+        if(locStorCdArr!==null){
+            for (let i = 0; i < locStorCdArr.length; i++) {
+                if (CdId == locStorCdArr[i].id) {
+                    return true
+                }
             }
+            return false
         }
-        return false
 
 
 
